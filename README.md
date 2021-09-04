@@ -11,11 +11,11 @@ This project contains a simple example of how to embed [nREPL](https://github.co
 
 Open a terminal and run:
 
-    mvn clojure:compile exec:java
+    mvn compile clojure:compile exec:java
 
 You should see a message saying that nrepl is started on port 7888. Next, open another terminal and run:
 
-    clj -Sdeps '{:deps {nrepl {:mvn/version "0.7.0-alpha2"}}}' -m nrepl.cmdline --connect --host localhost --port 7888
+    clj -Sdeps '{:deps {nrepl {:mvn/version "0.7.0-alpha2"}}}' -M -m nrepl.cmdline --connect --host localhost --port 7888
 
 This will create a client connection to the nrepl server.
 
